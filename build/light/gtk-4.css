@@ -1,32 +1,32 @@
 :root {
-  --accent-blue: #0077a6;
-  --accent-teal: #007d77;
-  --accent-green: #008138;
-  --accent-yellow: #9c6300;
-  --accent-orange: #9c6300;
-  --accent-red: #d0322e;
-  --accent-pink: #6f65b2;
-  --accent-purple: #6f65b2;
+  --accent-blue: #005c82;
+  --accent-teal: #00615c;
+  --accent-green: #006429;
+  --accent-yellow: #7b4c00;
+  --accent-orange: #7b4c00;
+  --accent-red: #a91d1c;
+  --accent-pink: #564e8d;
+  --accent-purple: #564e8d;
   --accent-slate: #c3c8e8;
 
-  --accent-color: #0077a6;
-  --accent-bg-color: #0077a6;
+  --accent-color: #005c82;
+  --accent-bg-color: #005c82;
   --accent-fg-color: #6de2ff;
 
-  --destructive-color: #d0322e;
-  --destructive-bg-color: #d0322e;
+  --destructive-color: #a91d1c;
+  --destructive-bg-color: #a91d1c;
   --destructive-fg-color: #ffc5bc;
 
-  --success-color: #008138;
-  --success-bg-color: #008138;
+  --success-color: #006429;
+  --success-bg-color: #006429;
   --success-fg-color: #57ee8d;
 
-  --warning-color: #9c6300;
-  --warning-bg-color: #9c6300;
+  --warning-color: #7b4c00;
+  --warning-bg-color: #7b4c00;
   --warning-fg-color: #ffcb6a;
 
-  --error-color: #d0322e;
-  --error-bg-color: #d0322e;
+  --error-color: #a91d1c;
+  --error-bg-color: #a91d1c;
   --error-fg-color: #ffc5bc;
 
   --window-bg-color: #d8dcf6;
@@ -70,24 +70,24 @@
 }
 
 
-@define-color accent_color #0077a6;
-@define-color accent_bg_color #0077a6;
+@define-color accent_color #005c82;
+@define-color accent_bg_color #005c82;
 @define-color accent_fg_color #6de2ff;
 
-@define-color destructive_color #d0322e;
-@define-color destructive_bg_color #d0322e;
+@define-color destructive_color #a91d1c;
+@define-color destructive_bg_color #a91d1c;
 @define-color destructive_fg_color #ffc5bc;
 
-@define-color success_color #008138;
-@define-color success_bg_color #008138;
+@define-color success_color #006429;
+@define-color success_bg_color #006429;
 @define-color success_fg_color #57ee8d;
 
-@define-color warning_color #9c6300;
-@define-color warning_bg_color #9c6300;
+@define-color warning_color #7b4c00;
+@define-color warning_bg_color #7b4c00;
 @define-color warning_fg_color #ffcb6a;
 
-@define-color error_color #d0322e;
-@define-color error_bg_color #d0322e;
+@define-color error_color #a91d1c;
+@define-color error_bg_color #a91d1c;
 @define-color error_fg_color #ffc5bc;
 
 @define-color window_bg_color #d8dcf6;
@@ -157,11 +157,11 @@
 @define-color purple_3 #6f65b2;
 @define-color purple_4 #564e8d;
 @define-color purple_5 #3e3768;
-@define-color brown_1 #9c6300;
-@define-color brown_2 #9c6300;
-@define-color brown_3 #9c6300;
-@define-color brown_4 #9c6300;
-@define-color brown_5 #9c6300;
+@define-color brown_1 #7b4c00;
+@define-color brown_2 #7b4c00;
+@define-color brown_3 #7b4c00;
+@define-color brown_4 #7b4c00;
+@define-color brown_5 #7b4c00;
 @define-color light_1 #c3c8e8;
 @define-color light_2 #c3c8e8;
 @define-color light_3 #c3c8e8;

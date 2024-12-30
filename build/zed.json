@@ -1,11 +1,11 @@
 {
-  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "Kleur",
   "author": "Kleur Contributors",
   "themes": [
     {
   "name": "Kleur Dark",
-  "appearance": "Kleur Contributors",
+  "appearance": "dark",
   "style": {
     "background.appearance": "opaque",
     "accents": [],
@@ -221,9 +221,6 @@
       "namespace.builtin": {
         "color": "#00c562"
       },
-      "variable.builtin": {
-        "color": "#00c562"
-      },
       "emphasis": {
         "color": "#aba0ff",
         "font_style": "italic"
@@ -239,20 +236,20 @@
 ,
 {
   "name": "Kleur Light",
-  "appearance": "Kleur Contributors",
+  "appearance": "light",
   "style": {
     "background.appearance": "opaque",
     "accents": [],
     "border": "#00000000",
     "border.variant": "#00000000",
-    "border.focused": "#0077a6",
+    "border.focused": "#005c82",
     "border.selected": "#00000000",
     "border.transparent": "#00000000",
     "border.disabled": "#00000000",
     "elevated_surface.background": "#c3c8e8",
     "surface.background": "#cdd2f2",
     "background": "#d8dcf6",
-    "element.background": "#0077a6",
+    "element.background": "#005c82",
     "element.hover": "#c3c8e8",
     "element.selected": "#55565e",
     "drop_target.background": "#6e6e7966",
@@ -284,100 +281,100 @@
     "terminal.background": "#d8dcf6",
     "terminal.ansi.black": "#d8dcf6",
     "terminal.ansi.bright_black": "#cdd2f2",
-    "terminal.ansi.red": "#d0322e",
+    "terminal.ansi.red": "#a91d1c",
     "terminal.ansi.bright_red": "#7f0c0f",
-    "terminal.ansi.green": "#008138",
+    "terminal.ansi.green": "#006429",
     "terminal.ansi.bright_green": "#00481b",
-    "terminal.ansi.yellow": "#9c6300",
+    "terminal.ansi.yellow": "#7b4c00",
     "terminal.ansi.bright_yellow": "#5a3600",
-    "terminal.ansi.blue": "#0077a6",
+    "terminal.ansi.blue": "#005c82",
     "terminal.ansi.bright_blue": "#00425f",
-    "terminal.ansi.magenta": "#6f65b2",
+    "terminal.ansi.magenta": "#564e8d",
     "terminal.ansi.bright_magenta": "#3e3768",
-    "terminal.ansi.cyan": "#007d77",
+    "terminal.ansi.cyan": "#00615c",
     "terminal.ansi.bright_cyan": "#004643",
     "terminal.ansi.white": "#090a0c",
-    "terminal.ansi.bright_white": "#0077a6",
-    "link_text.hover": "#007d77",
-    "conflict": "#d0322e",
-    "created": "#008138",
-    "deleted": "#d0322e",
-    "error": "#d0322e",
+    "terminal.ansi.bright_white": "#005c82",
+    "link_text.hover": "#00615c",
+    "conflict": "#a91d1c",
+    "created": "#006429",
+    "deleted": "#a91d1c",
+    "error": "#a91d1c",
     "hidden": "#3d3d44",
     "hint": "#3d3d44",
     "ignored": "#3d3d44",
-    "info": "#0077a6",
-    "modified": "#9c6300",
-    "warning": "#9c6300",
+    "info": "#005c82",
+    "modified": "#7b4c00",
+    "warning": "#7b4c00",
     "players": [],
     "syntax": {
       "namespace": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "class": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "class.abstract": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "enum": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "interface": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "struct": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "typeParameter": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "type": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "parameter": {
-        "color": "#6f65b2"
+        "color": "#564e8d"
       },
       "variable": {
-        "color": "#6f65b2"
+        "color": "#564e8d"
       },
       "variable.builtin": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "property": {
-        "color": "#6f65b2"
+        "color": "#564e8d"
       },
       "enumMember": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "decorator": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "event": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "punct": {
-        "color": "#d0322e"
+        "color": "#a91d1c"
       },
       "punctuation": {
-        "color": "#d0322e"
+        "color": "#a91d1c"
       },
       "punctuation.bracket": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "escapeSequence": {
-        "color": "#d0322e"
+        "color": "#a91d1c"
       },
       "function": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_style": "italic"
       },
       "method": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_style": "italic"
       },
       "macro": {
-        "color": "#0077a6"
+        "color": "#005c82"
       },
       "label": {
         "color": "#27282c"
@@ -386,84 +383,81 @@
         "color": "#6e6e79",
         "font_style": "italic"
       },
-      "string": { "color": "#008138" },
+      "string": { "color": "#006429" },
       "keyword": {
-        "color": "#6f65b2",
+        "color": "#564e8d",
         "font_style": "italic"
       },
       "keyword.control": {
-        "color": "#6f65b2",
+        "color": "#564e8d",
         "font_style": "italic"
       },
       "number": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "string.regex": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "boolean": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "bool": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "const": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "constant": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "operator": {
-        "color": "#6f65b2"
+        "color": "#564e8d"
       },
       "function.declaration": {
-        "color": "#6f65b2",
+        "color": "#564e8d",
         "font_weight": 700
       },
       "enum.declaration": {
-        "color": "#008138",
+        "color": "#006429",
         "font_weight": 700
       },
       "class.declaration": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_weight": 700
       },
       "method.declaration": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_weight": 700
       },
       "trait.declaration": {
-        "color": "#9c6300",
+        "color": "#7b4c00",
         "font_weight": 700
       },
       "struct.declaration": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_weight": 700
       },
       "function.async": {
-        "color": "#9c6300"
+        "color": "#7b4c00"
       },
       "unresolvedReference": {
-        "color": "#d0322e"
+        "color": "#a91d1c"
       },
       "namespace.defaultLibrary": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "variable.defaultLibrary": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "namespace.builtin": {
-        "color": "#008138"
-      },
-      "variable.builtin": {
-        "color": "#008138"
+        "color": "#006429"
       },
       "emphasis": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_style": "italic"
       },
       "emphasis.strong": {
-        "color": "#0077a6",
+        "color": "#005c82",
         "font_style": "italic",
         "font_weight": 700
       }
