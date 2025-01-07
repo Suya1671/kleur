@@ -8,7 +8,13 @@
   "appearance": "dark",
   "style": {
     "background.appearance": "opaque",
-    "accents": [],
+    "accents": [
+      "#aba0ff",
+      "#00b8f6",
+      "#00c562",
+      "#e89c00",
+      "#ff8a7e",
+    ],
     "border": "#00000000",
     "border.variant": "#00000000",
     "border.focused": "#aba0ff",
@@ -71,6 +77,7 @@
     "error": "#ff8a7e",
     "hidden": "#91929b",
     "hint": "#91929b",
+    "hint.background": "#13122e",
     "ignored": "#91929b",
     "info": "#00b8f6",
     "modified": "#e89c00",
@@ -182,6 +189,12 @@
       "operator": {
         "color": "#aba0ff"
       },
+      "tag": {
+        "color": "#aba0ff"
+      },
+      "attribute": {
+        "color": "#00b8f6"
+      },
       "function.declaration": {
         "color": "#aba0ff",
         "font_weight": 700
@@ -239,7 +252,13 @@
   "appearance": "light",
   "style": {
     "background.appearance": "opaque",
-    "accents": [],
+    "accents": [
+      "#564e8d",
+      "#005c82",
+      "#006429",
+      "#7b4c00",
+      "#a91d1c",
+    ],
     "border": "#00000000",
     "border.variant": "#00000000",
     "border.focused": "#005c82",
@@ -302,6 +321,7 @@
     "error": "#a91d1c",
     "hidden": "#3d3d44",
     "hint": "#3d3d44",
+    "hint.background": "#c3c8e8",
     "ignored": "#3d3d44",
     "info": "#005c82",
     "modified": "#7b4c00",
@@ -412,6 +432,12 @@
       },
       "operator": {
         "color": "#564e8d"
+      },
+      "tag": {
+        "color": "#564e8d"
+      },
+      "attribute": {
+        "color": "#005c82"
       },
       "function.declaration": {
         "color": "#564e8d",
