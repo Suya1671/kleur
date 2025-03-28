@@ -13,16 +13,7 @@ import { toVscodeTheme } from "./exporters/vscode.ts";
 import { toHelixTheme } from "./exporters/helix.ts";
 import { toGtk3Theme, toGtk4Theme } from "./exporters/gtk.ts";
 
-const { "vsce-path": vscePath } = parseArgs(
-  Deno.args,
-);
-
-if (!vscePath) {
-  console.error(
-    "Please provide a path to the vsce executable with --vsce-path",
-  );
-  Deno.exit(1);
-}
+const { "vsce-path": vscePath } = parseArgs(Deno.args);
 
 /**
  * Builds themes for apps or formats that don't support multiple themes bundled together
@@ -36,10 +27,13 @@ const buildSingleThemes = async (theme: Theme, type: string) => {
   const [_, ...colorList] = theme.theme.contrastColors;
   const backgrounds = objectEntries(theme.backgrounds)
     .map(([name, color]) => [name, color.lch()] as const)
-    .reduce((acc, [name, [l, c, h]]) => {
-      acc[name] = `lch(${l}, ${c}, ${h})`;
-      return acc;
-    }, {} as Record<string, string>);
+    .reduce(
+      (acc, [name, [l, c, h]]) => {
+        acc[name] = `lch(${l}, ${c}, ${h})`;
+        return acc;
+      },
+      {} as Record<string, string>,
+    );
 
   const lch = {
     ...backgrounds,
@@ -52,11 +46,9 @@ const buildSingleThemes = async (theme: Theme, type: string) => {
   const hexJson = JSON.stringify(hex, null, 2);
   await Deno.writeTextFile(`build/${pathType}/kleur-hex.json`, hexJson);
 
-  const base16 = toBase24(theme);
-  // @ts-ignore not an issue
-  base16.name = base16.scheme;
-  const base16Json = JSON.stringify(base16, null, 2);
-  const base16Yaml = YAML.stringify(base16);
+  const base24 = toBase24(theme);
+  const base16Json = JSON.stringify(base24, null, 2);
+  const base16Yaml = YAML.stringify(base24);
   await Deno.writeTextFile(`build/${pathType}/kleur.yaml`, base16Yaml);
   await Deno.writeTextFile(`build/${pathType}/kleur.json`, base16Json);
 
@@ -85,6 +77,13 @@ ${gtk3}`;
 };
 
 const buildVscode = async () => {
+  if (!vscePath) {
+    console.warn(
+      "Please provide a path to the vsce executable with --vsce-path to build vscode themes",
+    );
+    return;
+  }
+
   // Build Vscode
   console.log("Building vscode themes");
 

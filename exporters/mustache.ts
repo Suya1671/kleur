@@ -13,29 +13,31 @@ export const toMustache = (
   template: string,
   extra: Record<PropertyKey, string> = {},
 ) => {
-  const hexTheme = themeToColors(
-    convertTheme(theme, "HEX"),
-    (color) => color.hex(),
+  const hexTheme = themeToColors(convertTheme(theme, "HEX"), (color) =>
+    color.hex(),
   );
-  const { scheme: _, ...base24 } = toBase24(theme);
+  const { palette } = toBase24(theme);
   const hexObject = {
     ...toMustacheList(theme, hexTheme),
-    ...base24,
+    ...palette,
   };
   const hex: Record<string, string> = fromObjectEntries(
-    objectEntries(hexObject).map((
-      [key, value],
-    ) => [`${key}-hex`, value.startsWith("#") ? value.slice(1) : value]),
+    objectEntries(hexObject).map(([key, value]) => [
+      `${key}-hex`,
+      value.startsWith("#") ? value.slice(1) : value,
+    ]),
   );
 
-  const hexDecimal: Record<string, string> = objectEntries(hexObject)
-    .reduce((acc, [key, color]) => {
+  const hexDecimal: Record<string, string> = objectEntries(hexObject).reduce(
+    (acc, [key, color]) => {
       const [r, g, b] = chroma(color).rgb();
       acc[`${key}-dec-r`] = r.toString();
       acc[`${key}-dec-g`] = g.toString();
       acc[`${key}-dec-b`] = b.toString();
       return acc;
-    }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );
 
   // preferred over hex if available, as it's more accurate
   const lchTheme = themeToColors(convertTheme(theme, "LCH"), (color) => {
@@ -44,9 +46,10 @@ export const toMustache = (
   });
 
   const lch: Record<string, string> = fromObjectEntries(
-    objectEntries(toMustacheList(theme, lchTheme)).map((
-      [key, value],
-    ) => [`${key}-lch`, value]),
+    objectEntries(toMustacheList(theme, lchTheme)).map(([key, value]) => [
+      `${key}-lch`,
+      value,
+    ]),
   );
 
   const mustaceTheme = {
@@ -66,8 +69,8 @@ const toMustacheList = (
   theme: Theme,
   colors: ColorObject & BackgroundColors<string>,
 ) =>
-  objectEntries(colors)
-    .reduce((acc, [key, value]) => {
+  objectEntries(colors).reduce(
+    (acc, [key, value]) => {
       if (typeof value === "string") {
         acc[key] = value;
       } else {
@@ -79,4 +82,6 @@ const toMustacheList = (
         }
       }
       return acc;
-    }, {} as Record<string, string>);
+    },
+    {} as Record<string, string>,
+  );

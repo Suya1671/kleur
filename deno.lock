@@ -1,85 +1,96 @@
 {
-  "version": "3",
-  "packages": {
-    "specifiers": {
-      "jsr:@std/cli@^0.224.7": "jsr:@std/cli@0.224.7",
-      "npm:@adobe/leonardo-contrast-colors": "npm:@adobe/leonardo-contrast-colors@1.0.0",
-      "npm:@types/chroma-js": "npm:@types/chroma-js@2.4.4",
-      "npm:@types/chroma-js@2": "npm:@types/chroma-js@2.4.4",
-      "npm:@types/node": "npm:@types/node@18.16.19",
-      "npm:chroma-js@2": "npm:chroma-js@2.4.2"
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/cli@~0.224.7": "0.224.7",
+    "npm:@adobe/leonardo-contrast-colors@*": "1.0.0",
+    "npm:@types/chroma-js@2": "2.4.5",
+    "npm:chroma-js@2": "2.6.0"
+  },
+  "jsr": {
+    "@std/cli@0.224.7": {
+      "integrity": "654ca6477518e5e3a0d3fabafb2789e92b8c0febf1a1d24ba4b567aba94b5977"
+    }
+  },
+  "npm": {
+    "@adobe/leonardo-contrast-colors@1.0.0": {
+      "integrity": "sha512-a4mD0JZ1zNu2wIem/vWJqdaiuQZgxwOph/gpHA75mlXcs6iiIQx9G+W0jtssRFgdYYAi/ceQYOlYwiSQj1AUCw==",
+      "dependencies": [
+        "apca-w3",
+        "chroma-js",
+        "ciebase",
+        "ciecam02",
+        "hsluv"
+      ]
     },
-    "jsr": {
-      "@std/cli@0.224.7": {
-        "integrity": "654ca6477518e5e3a0d3fabafb2789e92b8c0febf1a1d24ba4b567aba94b5977"
-      }
+    "@types/chroma-js@2.4.5": {
+      "integrity": "sha512-6ISjhzJViaPCy2q2e6PgK+8HcHQDQ0V2LDiKmYAh+jJlLqDa6HbwDh0wOevHY0kHHUx0iZwjSRbVD47WOUx5EQ=="
     },
-    "npm": {
-      "@adobe/leonardo-contrast-colors@1.0.0": {
-        "integrity": "sha512-a4mD0JZ1zNu2wIem/vWJqdaiuQZgxwOph/gpHA75mlXcs6iiIQx9G+W0jtssRFgdYYAi/ceQYOlYwiSQj1AUCw==",
-        "dependencies": {
-          "apca-w3": "apca-w3@0.1.9",
-          "chroma-js": "chroma-js@2.4.2",
-          "ciebase": "ciebase@0.1.1",
-          "ciecam02": "ciecam02@0.4.6",
-          "hsluv": "hsluv@0.1.0"
-        }
-      },
-      "@types/chroma-js@2.4.4": {
-        "integrity": "sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==",
-        "dependencies": {}
-      },
-      "@types/node@18.16.19": {
-        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
-        "dependencies": {}
-      },
-      "apca-w3@0.1.9": {
-        "integrity": "sha512-Zrf6AeBeQjNe/fxK7U1jCo5zfdjDl6T4/kdw5Xlky3G7u+EJTZkyItjMYQGtwf9pkftsINxcYyOpuLkzKf1ITQ==",
-        "dependencies": {
-          "colorparsley": "colorparsley@0.1.8"
-        }
-      },
-      "chroma-js@2.4.2": {
-        "integrity": "sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==",
-        "dependencies": {}
-      },
-      "ciebase@0.1.1": {
-        "integrity": "sha512-KEnf/WVT5E+Gn+LsfMHGJFATltSOeW0qm7dpzQYL/Qe5PEpyTM+UI5bMoBo16FE81zMpu+U6032USTP6Cz1XNA==",
-        "dependencies": {
-          "mout": "mout@0.11.1"
-        }
-      },
-      "ciecam02@0.4.6": {
-        "integrity": "sha512-nh/Kl8s5lgtyEl7lA381JFinLhgUwDhJaAVgbVx2BaiiJIzJLumQvuFXwdS76tSch7jDjWejP+MtKYCCEk/brg==",
-        "dependencies": {
-          "ciebase": "ciebase@0.1.1",
-          "mout": "mout@0.11.1"
-        }
-      },
-      "colorparsley@0.1.8": {
-        "integrity": "sha512-rObESTTTE6G5qO5WFwFxWPggpw4KfpxnLC6Ssl8bITBnNVRhDsyCeTRAUxWQNVTx2pRknKlO2nddYTxjkdNFaw==",
-        "dependencies": {}
-      },
-      "hsluv@0.1.0": {
-        "integrity": "sha512-ERcanKLAszD2XN3Vh5r5Szkrv9q0oSTudmP0rkiKAGM/3NMc9FLmMZBB7TSqTaXJfSDBOreYTfjezCOYbRKqlw==",
-        "dependencies": {}
-      },
-      "mout@0.11.1": {
-        "integrity": "sha512-pK9VNiLE3QgGBrC/3ICAscwOLU7oTNeK2l32uqNAioBYtB2tQAfSsGDNChUlk7CP23126mc5lUt6+na9FlN8JA==",
-        "dependencies": {}
-      }
+    "apca-w3@0.1.9": {
+      "integrity": "sha512-Zrf6AeBeQjNe/fxK7U1jCo5zfdjDl6T4/kdw5Xlky3G7u+EJTZkyItjMYQGtwf9pkftsINxcYyOpuLkzKf1ITQ==",
+      "dependencies": [
+        "colorparsley"
+      ]
+    },
+    "chroma-js@2.6.0": {
+      "integrity": "sha512-BLHvCB9s8Z1EV4ethr6xnkl/P2YRFOGqfgvuMG/MyCbZPrTA+NeiByY6XvgF0zP4/2deU2CXnWyMa3zu1LqQ3A=="
+    },
+    "ciebase@0.1.1": {
+      "integrity": "sha512-KEnf/WVT5E+Gn+LsfMHGJFATltSOeW0qm7dpzQYL/Qe5PEpyTM+UI5bMoBo16FE81zMpu+U6032USTP6Cz1XNA==",
+      "dependencies": [
+        "mout"
+      ]
+    },
+    "ciecam02@0.4.6": {
+      "integrity": "sha512-nh/Kl8s5lgtyEl7lA381JFinLhgUwDhJaAVgbVx2BaiiJIzJLumQvuFXwdS76tSch7jDjWejP+MtKYCCEk/brg==",
+      "dependencies": [
+        "ciebase",
+        "mout"
+      ]
+    },
+    "colorparsley@0.1.8": {
+      "integrity": "sha512-rObESTTTE6G5qO5WFwFxWPggpw4KfpxnLC6Ssl8bITBnNVRhDsyCeTRAUxWQNVTx2pRknKlO2nddYTxjkdNFaw=="
+    },
+    "hsluv@0.1.0": {
+      "integrity": "sha512-ERcanKLAszD2XN3Vh5r5Szkrv9q0oSTudmP0rkiKAGM/3NMc9FLmMZBB7TSqTaXJfSDBOreYTfjezCOYbRKqlw=="
+    },
+    "mout@0.11.1": {
+      "integrity": "sha512-pK9VNiLE3QgGBrC/3ICAscwOLU7oTNeK2l32uqNAioBYtB2tQAfSsGDNChUlk7CP23126mc5lUt6+na9FlN8JA=="
     }
   },
   "remote": {
     "https://deno.land/x/mustache@v0.3.0/mod.ts": "002ffc0db1c5a433abe013fb204478df1e5f7a32246794a59203a17b1b8953ac",
     "https://deno.land/x/mustache@v0.3.0/mustache.mjs": "e4d66e7fd4423ecc65b0ed2648adab3922d8dfdd264d242ce89c67cf9d104041",
-    "https://esm.sh/v135/yaml@2.4.2/denonext/yaml.mjs": "4bb0c7bab1cfebb5557da3dba3595c5cac62cc517f7ffe3cdb29ebcacb125643",
-    "https://esm.sh/yaml@2.4.2": "fc771218df26a53990a4b4cac1783bcf7012620099c82f60b591fd9cf394ad8d"
+    "https://esm.sh/yaml@2.4.2": "e4ef98e431519bf1e9928798adb4a07268467f05a26129530a82e547c2eae850",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/doc/anchors.mjs": "547b2884a489ce130985cf078fd03d9788f20bf594a2e06e7ea597e251882942",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/doc/applyReviver.mjs": "2856789009ae1164f3c59f9b3f4ee31c324a547b49eeac63fdb12265ae38c0f9",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/doc/createNode.mjs": "57097f135a4ba331393f3d807c71cc491687524e91d8ed3b4334964e379d3558",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/log.mjs": "0624b402c72de7e1c52c14984940108cf9436134ae8eb720a12c54b3a57388fa",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/Alias.mjs": "8d92994e8dcf83d493b0389dfbf5430d7c9b28a4b68c5cb28fa3edcb6064628f",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/Collection.mjs": "97e5ee1a3f28bc8681fb37a97ac03d64cf8bdf28af40138e06e7065c1e2c44f3",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/Node.mjs": "addb7f424f84a00b15fa6e7565d4518f9978b96c9134efcb57cd157225c63b30",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/Pair.mjs": "ef60870d90c07ff8de0d5d6fb7a9cad1cbf5ef44418635536c94bd8196119bfd",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/Scalar.mjs": "16d92a95d386319dcebd83a3c85e5544a8eb5aed89ac76fcd87c5df424ade6c1",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/YAMLMap.mjs": "eb3f81ad113b5a60c70aa4aa1cb85e6648da0d2e2ecf5adc61f8516bf9fc83bb",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/YAMLSeq.mjs": "2a54c81631affa4b7a09f71bab3a25d43a5a3fd6464a35305e90ee12cae63b52",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/addPairToJSMap.mjs": "7f0aeb38fd07c5297fc98ca4c56bbfa835a9d1b2086c5242675fe5d5a6cf275a",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/identity.mjs": "f844500bc70a2e9be7685cee374306450b496fda7ee887d2af76c4c4d16a9b88",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/nodes/toJS.mjs": "9cf7d6ec204e4d0be8fea17ebadf41f5b53f166ea72a69ab6a1e7c2294d75562",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/schema/common/map.mjs": "50cecf7a9d689406cec9edf46d2b17a564628ae9de16f6f70b534e58ee645564",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/schema/common/seq.mjs": "e91f27d10676dc78b441c2bca84bd3d5a771dac714b51424d7cde4e76389d809",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/schema/common/string.mjs": "ee41005279d053b52a499d710f7c11939949032067a783a3853b468471743334",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/foldFlowLines.mjs": "db3e5dd3ee71128de7aa05faa62c4039d2e63bf259c004b22792fabf7d43452e",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/stringify.mjs": "34b7a0ded08946ef42d4aed3f43ef6b4f179cf141c983f4c6b738c7266aafd73",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/stringifyCollection.mjs": "216973c3611027aec24438b8e3bb194cab85860ec807bd9237252472f1f53050",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/stringifyComment.mjs": "bcb1ffce4c9b6e9e53ce7c62b6ba8231fa82bb060f53dc24bb8655812e187445",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/stringifyNumber.mjs": "27e8dc5ee75ad1fd1a5697c0384d0cc75e76ecd64800b4438aa0bda666785771",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/stringify/stringifyString.mjs": "70223e713b4cdf6b864ad26fd408fd9792c2fec9b05cdf5096c211cbe991f5b9",
+    "https://esm.sh/yaml@2.4.2/denonext/browser/dist/visit.mjs": "3f7cc4afe0b94bab2a649e3be5b3a39a16a59ac9f8fbbd19c4dacc3b911bea9b",
+    "https://esm.sh/yaml@2.4.2/denonext/yaml.mjs": "fa98f676042730205cdda1539bdcb4e2c9c7bf4e8dfab8fc2b5109fb0631424c"
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/cli@^0.224.7",
-      "npm:@adobe/leonardo-contrast-colors",
+      "jsr:@std/cli@~0.224.7",
+      "npm:@adobe/leonardo-contrast-colors@*",
       "npm:chroma-js@2"
     ]
   }
