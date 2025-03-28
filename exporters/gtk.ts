@@ -1,12 +1,12 @@
 import { Theme } from "../palettes.ts";
-import { toMustache } from "./mustache.ts";
+import { handlebars, toHandlebarsContext } from "./mustache.ts";
 
 export const toGtk3Theme = async (theme: Theme) => {
-  const template = await Deno.readTextFile("templates/gtk-3.mustache");
-  return toMustache(theme, template);
+  const context = toHandlebarsContext(theme);
+  return await handlebars.renderView("gtk-3", context);
 };
 
 export const toGtk4Theme = async (theme: Theme) => {
-  const template = await Deno.readTextFile("templates/gtk-4.mustache");
-  return toMustache(theme, template);
+  const context = toHandlebarsContext(theme);
+  return await handlebars.renderView("gtk-4", context);
 };

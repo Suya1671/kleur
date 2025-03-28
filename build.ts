@@ -12,6 +12,7 @@ import { toCss } from "./exporters/css.ts";
 import { toVscodeTheme } from "./exporters/vscode.ts";
 import { toHelixTheme } from "./exporters/helix.ts";
 import { toGtk3Theme, toGtk4Theme } from "./exporters/gtk.ts";
+import { toPtyxisTheme } from "./exporters/ptyxis.ts";
 
 const { "vsce-path": vscePath } = parseArgs(Deno.args);
 
@@ -104,7 +105,6 @@ const buildVscode = async () => {
   console.log("Built vscode themes");
 };
 
-// TODO: zed
 const buildZed = async () => {
   console.log("Building zed themes");
   const theme = await toZedThemes([dark, light]);
@@ -112,9 +112,17 @@ const buildZed = async () => {
   console.log("Built zed themes");
 };
 
+const buildPtyxis = async () => {
+  console.log("Building Ptyxis theme");
+  const theme = await toPtyxisTheme(light, dark);
+  await Deno.writeTextFile(`build/ptyxis.palette`, theme);
+  console.log("Built Ptyxis theme");
+};
+
 await Promise.all([
   buildSingleThemes(dark, "Dark"),
   buildSingleThemes(light, "Light"),
   buildVscode(),
   buildZed(),
+  buildPtyxis(),
 ]);

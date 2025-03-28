@@ -1,4 +1,4 @@
-import { render } from "mustache";
+import { Handlebars } from "handlebars";
 import { ColorObject } from "../generate.ts";
 import { fromObjectEntries } from "../lib.ts";
 import { objectEntries } from "../lib.ts";
@@ -8,9 +8,19 @@ import { convertTheme, themeToColors } from "./outputConversion.ts";
 // @ts-types="npm:@types/chroma-js@2"
 import chroma from "chroma";
 
-export const toMustache = (
+export const handlebars = new Handlebars({
+  baseDir: "templates",
+  extname: ".mustache",
+  layoutsDir: "layouts/",
+  partialsDir: "partials/",
+  cachePartials: true,
+  defaultLayout: "",
+  compilerOptions: undefined,
+  helpers: undefined,
+});
+
+export const toHandlebarsContext = (
   theme: Theme,
-  template: string,
   extra: Record<PropertyKey, string> = {},
 ) => {
   const hexTheme = themeToColors(convertTheme(theme, "HEX"), (color) =>
@@ -62,7 +72,7 @@ export const toMustache = (
     ...extra,
   };
 
-  return render(template, mustaceTheme);
+  return mustaceTheme;
 };
 
 const toMustacheList = (
