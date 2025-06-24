@@ -1,10 +1,8 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
     "jsr:@std/cli@~0.224.7": "0.224.7",
     "npm:@adobe/leonardo-contrast-colors@*": "1.0.0",
-    "npm:@types/chroma-js@2": "2.4.5",
-    "npm:@types/node@*": "22.12.0",
     "npm:chroma-js@2": "2.6.0"
   },
   "jsr": {
@@ -21,15 +19,6 @@
         "ciebase",
         "ciecam02",
         "hsluv"
-      ]
-    },
-    "@types/chroma-js@2.4.5": {
-      "integrity": "sha512-6ISjhzJViaPCy2q2e6PgK+8HcHQDQ0V2LDiKmYAh+jJlLqDa6HbwDh0wOevHY0kHHUx0iZwjSRbVD47WOUx5EQ=="
-    },
-    "@types/node@22.12.0": {
-      "integrity": "sha512-Fll2FZ1riMjNmlmJOdAyY5pUbkftXslB5DgEzlIuNaiWhXd00FhWxVC/r4yV/4wBb9JfImTu+jiSvXTkJ7F/gA==",
-      "dependencies": [
-        "undici-types"
       ]
     },
     "apca-w3@0.1.9": {
@@ -62,16 +51,12 @@
     },
     "mout@0.11.1": {
       "integrity": "sha512-pK9VNiLE3QgGBrC/3ICAscwOLU7oTNeK2l32uqNAioBYtB2tQAfSsGDNChUlk7CP23126mc5lUt6+na9FlN8JA=="
-    },
-    "undici-types@6.20.0": {
-      "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
     }
   },
   "redirects": {
     "https://esm.sh/source-map@^0.6.1?target=denonext": "https://esm.sh/source-map@0.6.1?target=denonext"
   },
   "remote": {
-    "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js": "0e5416f145e7bf16c58504356c732fe7e99671f4696194c5b140a252db02f0af",
     "https://deno.land/std@0.181.0/_util/asserts.ts": "178dfc49a464aee693a7e285567b3d0b555dc805ff490505a8aae34f9cfb1462",
     "https://deno.land/std@0.181.0/_util/os.ts": "d932f56d41e4f6a6093d56044e29ce637f8dcc43c5a90af43504a889cf1775e3",
     "https://deno.land/std@0.181.0/fs/_util.ts": "65381f341af1ff7f40198cee15c20f59951ac26e51ddc651c5293e24f9ce6f32",
@@ -97,10 +82,8 @@
     "https://deno.land/std@0.181.0/path/separator.ts": "0fb679739d0d1d7bf45b68dacfb4ec7563597a902edbaf3c59b50d5bcadd93b1",
     "https://deno.land/std@0.181.0/path/win32.ts": "d186344e5583bcbf8b18af416d13d82b35a317116e6460a5a3953508c3de5bba",
     "https://deno.land/x/handlebars@v0.10.0/mod.ts": "7d0bbcf1870f3a71199e0a2e05d3f2d536aa3a4d975598364d94efc8dd94d0ee",
-    "https://deno.land/x/mustache@v0.3.0/mod.ts": "002ffc0db1c5a433abe013fb204478df1e5f7a32246794a59203a17b1b8953ac",
-    "https://deno.land/x/mustache@v0.3.0/mustache.mjs": "e4d66e7fd4423ecc65b0ed2648adab3922d8dfdd264d242ce89c67cf9d104041",
     "https://esm.sh/handlebars@4.7.7": "87ff4cc17833974558bfb653e836cb463a9380aa28bf8f1c518c2d383f3b4443",
-    "https://esm.sh/handlebars@4.7.7/denonext/handlebars.mjs": "d72017e24e363818476d7b1bd0f4fcdcaf978e5bfae0e5c3b92017e04c0fbf97",
+    "https://esm.sh/handlebars@4.7.7/denonext/handlebars.mjs": "e75eba00a62e713d1b29793d17642f02273316bdb7c05527eed3113d9accd39f",
     "https://esm.sh/source-map@0.6.1/denonext/source-map.mjs": "ed3f2cf0c5f9561924c9b923ea8ffc24709ae31f1a90dd6c67be04c99598f626",
     "https://esm.sh/source-map@0.6.1?target=denonext": "3803db0ea481a551d1b0f98b57c3b32597fe2c03a5204fbec3aa58d1892f5fa0",
     "https://esm.sh/yaml@2.4.2": "e4ef98e431519bf1e9928798adb4a07268467f05a26129530a82e547c2eae850",

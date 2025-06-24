@@ -71,9 +71,9 @@ export const combinedCssTheme = (light: Theme, dark: Theme) => {
     .join("\n");
 
   const defaultShadeStr = objectEntries(lightShades)
-    .flatMap(([name, color]) => [
-      `--${name}: light-dark(${color[light.baseShade].replaceAll(",", "")}, ${darkShades[name][dark.baseShade].replaceAll(",", "")});`,
-      `--${name}-bright: light-dark(${color[light.brightShade].replaceAll(",", "")}, ${darkShades[name][dark.brightShade].replaceAll(",", "")});`,
+    .flatMap(([name, _]) => [
+      `--${name}: light-dark(var(--${name}-${light.baseShade}), var(--${name}-${dark.baseShade}));`,
+      `--${name}-bright: light-dark(var(--${name}-${light.brightShade}), var(--${name}-${dark.brightShade}));`,
     ])
     .join("\n");
 

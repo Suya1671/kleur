@@ -25,15 +25,14 @@ export const convertPaletteToColors = (
   >,
   polarity: Polarity,
 ) => {
-  const ratios = [1.2, 2.26, 3.24, 4.57, 6.55, 8.87, 11.84, 15.29];
-  if (polarity == "light") ratios.reverse();
+  const ratios = [20.21, 36.7, 51.69, 65.16, 77.09, 87.03, 94.93, 98.99];
 
   const asColor = (name: string, color: Chroma.Color): Color => {
     return new Color({
       name,
       colorKeys: [color.hex() as CssColor],
       ratios,
-      colorspace: "OKLCH",
+      colorspace: "LCH",
       smooth: true,
       output: "LCH",
     });
@@ -93,6 +92,7 @@ export const colorsToTheme = (
     contrast,
     saturation,
     output: "LCH",
+    formula: "wcag3",
   });
 
   const { background: bgStr } = theme.contrastColorPairs;

@@ -12,16 +12,17 @@ const darkColors = convertPaletteToColors(
   },
   "dark",
 );
+
 export const dark = colorsToTheme(
   {
     name: "Dark",
-    baseShade: 600,
-    brightShade: 700,
+    baseShade: 400,
+    brightShade: 500,
     polarity: "dark",
   },
   darkColors,
   {
-    lightness: 1,
+    lightness: 2,
     contrast: 1,
     saturation: 100,
   },
@@ -44,19 +45,19 @@ const lightColors = convertPaletteToColors(
 export const light = colorsToTheme(
   {
     name: "Light",
-    baseShade: 200,
-    brightShade: 300,
+    baseShade: 600,
+    brightShade: 500,
     polarity: "light",
   },
   lightColors,
   {
-    lightness: 90,
-    contrast: 1.2,
-    saturation: 150,
+    lightness: 97,
+    contrast: 1,
+    saturation: 100,
   },
   (_background) => ({
-    background: oklch(0.97, 0.02, 284),
-    surface: oklch(0.965, 0.02, 284),
-    overlay: oklch(0.96, 0.02, 284),
+    background: oklch(0.96, 0.02, 284),
+    surface: oklch(0.96, 0.02, 284),
+    overlay: oklch(0.95, 0.02, 284),
   }),
 );
