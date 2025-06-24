@@ -8,7 +8,7 @@ import { toZedThemes } from "./exporters/zed.ts";
 import { themeToColors } from "./exporters/outputConversion.ts";
 import { toBase24 } from "./exporters/base24.ts";
 import { toWindowsTerminalTheme } from "./exporters/windowsTerminal.ts";
-import { toCss } from "./exporters/css.ts";
+import { combinedCssTheme, toCss } from "./exporters/css.ts";
 import { toVscodeTheme } from "./exporters/vscode.ts";
 import { toHelixTheme } from "./exporters/helix.ts";
 import { toGtk3Theme, toGtk4Theme } from "./exporters/gtk.ts";
@@ -119,10 +119,18 @@ const buildPtyxis = async () => {
   console.log("Built Ptyxis theme");
 };
 
+const buildCssCombined = async () => {
+  console.log("Building combined CSS");
+  const css = combinedCssTheme(light, dark);
+  await Deno.writeTextFile(`build/kleur.css`, css);
+  console.log("Built combined CSS");
+};
+
 await Promise.all([
   buildSingleThemes(dark, "Dark"),
   buildSingleThemes(light, "Light"),
   buildVscode(),
   buildZed(),
   buildPtyxis(),
+  buildCssCombined(),
 ]);

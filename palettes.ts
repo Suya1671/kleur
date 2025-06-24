@@ -100,7 +100,7 @@ export const dark = {
 } satisfies KeyColors<Color>;
 
 export const light = {
-  base: oklch(0.77, 0.02, 284),
+  base: oklch(0.97, 0.02, 284),
   blue: oklch(0.77, 0.2, 240),
   green: oklch(0.77, 0.2, 152),
   orange: oklch(0.77, 0.2, 83),

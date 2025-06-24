@@ -20,10 +20,7 @@ export const convertLeonardoTheme = (
     output,
   });
 
-export const convertTheme = (
-  theme: Theme,
-  output: Colorspace,
-): Theme => {
+export const convertTheme = (theme: Theme, output: Colorspace): Theme => {
   const newTheme = convertLeonardoTheme(theme.theme, output);
 
   return {
@@ -35,8 +32,9 @@ export const convertTheme = (
 export const themeToColors = <T>(
   theme: Theme,
   mapBackground: (color: chroma.Color) => T,
+  output: Colorspace = "HEX",
 ): ColorObject & BackgroundColors<T> => {
-  const hexTheme = convertLeonardoTheme(theme.theme, "HEX");
+  const hexTheme = convertLeonardoTheme(theme.theme, output);
 
   const [_, ...colorList] = hexTheme.contrastColors;
   const colors = colorListToObj(colorList);

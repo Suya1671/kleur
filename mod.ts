@@ -1,10 +1,17 @@
 import * as palettes from "./palettes.ts";
 import { colorsToTheme, convertPaletteToColors } from "./generate.ts";
+// @deno-types="npm:@types/chroma-js@2"
+import Chroma from "chroma";
+const { oklch } = Chroma;
 
-const darkColors = convertPaletteToColors(palettes.dark, {
-  primary: "purple",
-  secondary: "blue",
-});
+const darkColors = convertPaletteToColors(
+  palettes.dark,
+  {
+    primary: "purple",
+    secondary: "blue",
+  },
+  "dark",
+);
 export const dark = colorsToTheme(
   {
     name: "Dark",
@@ -21,31 +28,35 @@ export const dark = colorsToTheme(
   (background) => ({
     background: background.set("oklch.l", 0.14).set("oklch.c", 0.03),
     surface: background.set("oklch.l", 0.16).set("oklch.c", 0.055),
-    overlay: background.set("oklch.l", 0.20).set("oklch.c", 0.055),
+    overlay: background.set("oklch.l", 0.2).set("oklch.c", 0.055),
   }),
 );
 
-const lightColors = convertPaletteToColors(palettes.light, {
-  // I prefer blue as the primary color in light themes. Deal with it:tm:
-  primary: "blue",
-  secondary: "purple",
-});
+const lightColors = convertPaletteToColors(
+  palettes.light,
+  {
+    primary: "purple",
+    secondary: "blue",
+  },
+  "light",
+);
+
 export const light = colorsToTheme(
   {
     name: "Light",
-    baseShade: 400,
-    brightShade: 500,
+    baseShade: 200,
+    brightShade: 300,
     polarity: "light",
   },
   lightColors,
   {
-    lightness: 95,
-    contrast: 1.5,
-    saturation: 100,
+    lightness: 90,
+    contrast: 1.2,
+    saturation: 150,
   },
-  (background) => ({
-    background: background.set("oklch.l", 0.90).set("oklch.c", 0.035),
-    surface: background.set("oklch.l", 0.87).set("oklch.c", 0.045),
-    overlay: background.set("oklch.l", 0.84).set("oklch.c", 0.045),
+  (_background) => ({
+    background: oklch(0.97, 0.02, 284),
+    surface: oklch(0.965, 0.02, 284),
+    overlay: oklch(0.96, 0.02, 284),
   }),
 );

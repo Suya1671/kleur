@@ -23,33 +23,35 @@ export const convertPaletteToColors = (
     keyof CustomColors<Chroma.Color>,
     keyof KeyColors<Chroma.Color>
   >,
+  polarity: Polarity,
 ) => {
+  const ratios = [1.2, 2.26, 3.24, 4.57, 6.55, 8.87, 11.84, 15.29];
+  if (polarity == "light") ratios.reverse();
+
   const asColor = (name: string, color: Chroma.Color): Color => {
     return new Color({
       name,
-      // @ts-expect-error this works in chroma-js
-      colorKeys: [color.hex()],
-      ratios: [1.2, 2.26, 3.24, 4.57, 6.55, 8.87, 11.84, 15.29],
+      colorKeys: [color.hex() as CssColor],
+      ratios,
       colorspace: "OKLCH",
       smooth: true,
-      output: "OKLCH",
+      output: "LCH",
     });
   };
 
   const asBackground = (name: string, color: Chroma.Color): BackgroundColor => {
     return new BackgroundColor({
       name,
-      // @ts-expect-error this works in chroma-js
-      colorKeys: [color.hex()],
-      ratios: [1.2, 2.06, 2.95, 4.27, 6.05, 8.37, 11.34, 14.89],
+      colorKeys: [color.hex() as CssColor],
+      ratios,
       colorspace: "OKLCH",
       smooth: true,
-      output: "OKLCH",
+      output: "LCH",
     });
   };
 
   const colors = objectEntries(palette).map(([name, oklch]) =>
-    asColor(name, oklch)
+    asColor(name, oklch),
   );
 
   for (const [extraKey, value] of objectEntries(extraKeys)) {
@@ -118,8 +120,7 @@ export const colorsToTheme = (
 export type Shade = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800;
 export type ColorShades = Record<Shade, CssColor>;
 export type ColorObject = Record<
-  | keyof CustomColors<Chroma.Color>
-  | keyof KeyColors<Chroma.Color>,
+  keyof CustomColors<Chroma.Color> | keyof KeyColors<Chroma.Color>,
   ColorShades
 >;
 

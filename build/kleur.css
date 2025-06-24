@@ -1,0 +1,104 @@
+:root {
+  --background: light-dark(
+    oklch(0.9689049476050546 0.015111687784079418 283.4382101851092),
+    oklch(0.1399999980282844 0.029999995266939042 282.16480117798756)
+  );
+  --overlay: light-dark(
+    oklch(0.9599108520213875 0.019605045420900944 283.96695302724044),
+    oklch(0.1999999971793962 0.05499999338697096 282.1648018068697)
+  );
+  --surface: light-dark(
+    oklch(0.964405445289017 0.01735586176643236 283.7426178287385),
+    oklch(0.15999999770159018 0.05499999484431615 282.16480074817105)
+  );
+  --base-100: light-dark(lch(82% 5 286deg), lch(11% 12 294deg));
+  --base-200: light-dark(lch(59% 4 285deg), lch(31% 10 292deg));
+  --base-300: light-dark(lch(48% 4 291deg), lch(41% 9 291deg));
+  --base-400: light-dark(lch(38% 3 283deg), lch(50% 7 291deg));
+  --base-500: light-dark(lch(28% 3 291deg), lch(61% 5 286deg));
+  --base-600: light-dark(lch(19% 1 272deg), lch(70% 4 291deg));
+  --base-700: light-dark(lch(7% 1 290deg), lch(80% 3 290deg));
+  --base-800: light-dark(lch(0% 0 0deg), lch(89% 2 290deg));
+  --blue-100: light-dark(lch(82% 38 228deg), lch(11% 15 254deg));
+  --blue-200: light-dark(lch(59% 40 251deg), lch(31% 26 254deg));
+  --blue-300: light-dark(lch(48% 35 252deg), lch(41% 31 253deg));
+  --blue-400: light-dark(lch(38% 30 254deg), lch(50% 36 252deg));
+  --blue-500: light-dark(lch(28% 25 254deg), lch(61% 41 250deg));
+  --blue-600: light-dark(lch(19% 19 254deg), lch(70% 45 248deg));
+  --blue-700: light-dark(lch(7% 13 257deg), lch(80% 40 232deg));
+  --blue-800: light-dark(lch(0% 0 0deg), lch(89% 28 218deg));
+  --green-100: light-dark(lch(82% 74 150deg), lch(11% 23 149deg));
+  --green-200: light-dark(lch(59% 66 148deg), lch(31% 43 146deg));
+  --green-300: light-dark(lch(48% 58 147deg), lch(41% 51 147deg));
+  --green-400: light-dark(lch(38% 49 146deg), lch(50% 59 147deg));
+  --green-500: light-dark(lch(28% 40 146deg), lch(61% 68 147deg));
+  --green-600: light-dark(lch(19% 32 146deg), lch(70% 74 149deg));
+  --green-700: light-dark(lch(7% 15 150deg), lch(80% 75 150deg));
+  --green-800: light-dark(lch(0% 0 0deg), lch(89% 60 150deg));
+  --orange-100: light-dark(lch(82% 64 80deg), lch(11% 18 66deg));
+  --orange-200: light-dark(lch(59% 68 74deg), lch(31% 43 73deg));
+  --orange-300: light-dark(lch(48% 58 73deg), lch(41% 52 73deg));
+  --orange-400: light-dark(lch(38% 50 72deg), lch(50% 60 73deg));
+  --orange-500: light-dark(lch(28% 40 72deg), lch(61% 69 75deg));
+  --orange-600: light-dark(lch(19% 29 69deg), lch(70% 77 76deg));
+  --orange-700: light-dark(lch(7% 12 58deg), lch(80% 69 78deg));
+  --orange-800: light-dark(lch(0% 0 0deg), lch(89% 40 86deg));
+  --purple-100: light-dark(lch(82% 31 298deg), lch(11% 21 299deg));
+  --purple-200: light-dark(lch(59% 51 299deg), lch(31% 35 300deg));
+  --purple-300: light-dark(lch(48% 46 300deg), lch(41% 42 300deg));
+  --purple-400: light-dark(lch(38% 39 300deg), lch(50% 47 300deg));
+  --purple-500: light-dark(lch(28% 33 300deg), lch(61% 52 299deg));
+  --purple-600: light-dark(lch(19% 26 300deg), lch(70% 52 299deg));
+  --purple-700: light-dark(lch(7% 17 299deg), lch(80% 35 298deg));
+  --purple-800: light-dark(lch(0% 0 0deg), lch(89% 18 296deg));
+  --red-100: light-dark(lch(82% 28 32deg), lch(11% 34 28deg));
+  --red-200: light-dark(lch(59% 71 33deg), lch(31% 61 35deg));
+  --red-300: light-dark(lch(48% 73 34deg), lch(41% 69 34deg));
+  --red-400: light-dark(lch(38% 67 35deg), lch(50% 74 34deg));
+  --red-500: light-dark(lch(28% 58 35deg), lch(61% 70 33deg));
+  --red-600: light-dark(lch(19% 46 34deg), lch(70% 51 31deg));
+  --red-700: light-dark(lch(7% 27 22deg), lch(80% 31 32deg));
+  --red-800: light-dark(lch(0% 0 0deg), lch(89% 16 34deg));
+  --teal-100: light-dark(lch(82% 46 190deg), lch(11% 13 190deg));
+  --teal-200: light-dark(lch(59% 36 190deg), lch(31% 23 188deg));
+  --teal-300: light-dark(lch(48% 31 190deg), lch(41% 28 190deg));
+  --teal-400: light-dark(lch(38% 26 189deg), lch(50% 32 190deg));
+  --teal-500: light-dark(lch(28% 22 189deg), lch(61% 37 189deg));
+  --teal-600: light-dark(lch(19% 17 189deg), lch(70% 42 189deg));
+  --teal-700: light-dark(lch(7% 9 190deg), lch(80% 46 190deg));
+  --teal-800: light-dark(lch(0% 0 0deg), lch(89% 41 190deg));
+  --primary-100: light-dark(lch(82% 31 298deg), lch(11% 21 299deg));
+  --primary-200: light-dark(lch(59% 51 299deg), lch(31% 35 300deg));
+  --primary-300: light-dark(lch(48% 46 300deg), lch(41% 42 300deg));
+  --primary-400: light-dark(lch(38% 39 300deg), lch(50% 47 300deg));
+  --primary-500: light-dark(lch(28% 33 300deg), lch(61% 52 299deg));
+  --primary-600: light-dark(lch(19% 26 300deg), lch(70% 52 299deg));
+  --primary-700: light-dark(lch(7% 17 299deg), lch(80% 35 298deg));
+  --primary-800: light-dark(lch(0% 0 0deg), lch(89% 18 296deg));
+  --secondary-100: light-dark(lch(82% 38 228deg), lch(11% 15 254deg));
+  --secondary-200: light-dark(lch(59% 40 251deg), lch(31% 26 254deg));
+  --secondary-300: light-dark(lch(48% 35 252deg), lch(41% 31 253deg));
+  --secondary-400: light-dark(lch(38% 30 254deg), lch(50% 36 252deg));
+  --secondary-500: light-dark(lch(28% 25 254deg), lch(61% 41 250deg));
+  --secondary-600: light-dark(lch(19% 19 254deg), lch(70% 45 248deg));
+  --secondary-700: light-dark(lch(7% 13 257deg), lch(80% 40 232deg));
+  --secondary-800: light-dark(lch(0% 0 0deg), lch(89% 28 218deg));
+  --base: light-dark(lch(59% 4 285deg), lch(70% 4 291deg));
+  --base-bright: light-dark(lch(48% 4 291deg), lch(80% 3 290deg));
+  --blue: light-dark(lch(59% 40 251deg), lch(70% 45 248deg));
+  --blue-bright: light-dark(lch(48% 35 252deg), lch(80% 40 232deg));
+  --green: light-dark(lch(59% 66 148deg), lch(70% 74 149deg));
+  --green-bright: light-dark(lch(48% 58 147deg), lch(80% 75 150deg));
+  --orange: light-dark(lch(59% 68 74deg), lch(70% 77 76deg));
+  --orange-bright: light-dark(lch(48% 58 73deg), lch(80% 69 78deg));
+  --purple: light-dark(lch(59% 51 299deg), lch(70% 52 299deg));
+  --purple-bright: light-dark(lch(48% 46 300deg), lch(80% 35 298deg));
+  --red: light-dark(lch(59% 71 33deg), lch(70% 51 31deg));
+  --red-bright: light-dark(lch(48% 73 34deg), lch(80% 31 32deg));
+  --teal: light-dark(lch(59% 36 190deg), lch(70% 42 189deg));
+  --teal-bright: light-dark(lch(48% 31 190deg), lch(80% 46 190deg));
+  --primary: light-dark(lch(59% 51 299deg), lch(70% 52 299deg));
+  --primary-bright: light-dark(lch(48% 46 300deg), lch(80% 35 298deg));
+  --secondary: light-dark(lch(59% 40 251deg), lch(70% 45 248deg));
+  --secondary-bright: light-dark(lch(48% 35 252deg), lch(80% 40 232deg));
+}
