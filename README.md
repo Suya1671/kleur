@@ -9,8 +9,8 @@
 
 ## Custom ports
 
-Most ports are handled here in the `build` folder or through nix stylix if I haven't made a custom one for them.
-Here are some outside the `build` folder:
+Most ports are handled here in the `build` folder or through nix stylix if I
+haven't made a custom one for them. Here are some outside the `build` folder:
 
 - Monkeytype
   - [Dark](https://monkeytype.com?customTheme=eyJjIjpbIiMwNzA3MTUiLCIjYWJhMGZmIiwiIzc3NmRiZSIsIiM3Nzc3ODMiLCIjMTMxMjJlIiwiI2M1YzVjYiIsIiNkZDNiMzYiLCIjZmZiM2E4IiwiI2RkM2IzNiIsIiNmZmIzYTgiXSwiaSI6IiIsInMiOiJjb3ZlciIsImYiOlswLDEsMSwxXX0=)

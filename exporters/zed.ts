@@ -1,5 +1,7 @@
 import { Theme } from "../palettes.ts";
 import { handlebars, toHandlebarsContext } from "./mustache.ts";
+// @ts-types="npm:@types/chroma-js@2"
+import chroma from "chroma";
 
 const toZedTheme = async (theme: Theme) => {
   const context = toHandlebarsContext(theme);

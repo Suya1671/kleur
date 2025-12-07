@@ -1,12 +1,12 @@
 {
-    "configurations": [
-        {
-            "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}/build/vscode"
-            ],
-            "name": "Launch Extension",
-            "request": "launch",
-            "type": "extensionHost"
-        }
-    ]
+  "configurations": [
+    {
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/build/vscode"
+      ],
+      "name": "Launch Extension",
+      "request": "launch",
+      "type": "extensionHost"
+    }
+  ]
 }

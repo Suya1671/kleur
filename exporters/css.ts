@@ -23,7 +23,7 @@ export const toCss = (inputTheme: Theme) => {
       objectEntries(color).map(
         ([shadeName, shadeColor]) =>
           `--${name}-${shadeName}: ${shadeColor.replaceAll(",", "")};`,
-      ),
+      )
     )
     // .map((line) => line.replace("deg", ""))
     .join("\n");
@@ -65,8 +65,10 @@ export const combinedCssTheme = (light: Theme, dark: Theme) => {
     .flatMap(([name, color]) =>
       objectEntries(color).map(
         ([shadeName, shadeColor]) =>
-          `--${name}-${shadeName}: light-dark(${shadeColor.replaceAll(",", "")}, ${darkShades[name][shadeName].replaceAll(",", "")});`,
-      ),
+          `--${name}-${shadeName}: light-dark(${
+            shadeColor.replaceAll(",", "")
+          }, ${darkShades[name][shadeName].replaceAll(",", "")});`,
+      )
     )
     .join("\n");
 

@@ -50,7 +50,7 @@ export const convertPaletteToColors = (
   };
 
   const colors = objectEntries(palette).map(([name, oklch]) =>
-    asColor(name, oklch),
+    asColor(name, oklch)
   );
 
   for (const [extraKey, value] of objectEntries(extraKeys)) {

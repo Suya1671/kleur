@@ -23,8 +23,9 @@ export const toHandlebarsContext = (
   theme: Theme,
   extra: Record<PropertyKey, string> = {},
 ) => {
-  const hexTheme = themeToColors(convertTheme(theme, "HEX"), (color) =>
-    color.hex(),
+  const hexTheme = themeToColors(
+    convertTheme(theme, "HEX"),
+    (color) => color.hex(),
   );
   const { palette } = toBase24(theme);
   const hexObject = {
@@ -62,7 +63,7 @@ export const toHandlebarsContext = (
     ]),
   );
 
-  const mustaceTheme = {
+  let mustaceTheme = {
     "scheme-name": `Kleur ${theme.name}`,
     "scheme-author": "Kleur Contributors",
     polarity: theme.polarity,

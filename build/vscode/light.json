@@ -519,7 +519,7 @@
     "charts.orange": "#7b4c00",
     "charts.green": "#006429",
     "charts.purple": "#564e8d",
-    "ports.iconRunningProcessForeground": "#7b4c00",
+    "ports.iconRunningProcessForeground": "#7b4c00"
   },
   "tokenColors": [
     {
@@ -610,7 +610,7 @@
       "name": "Keyword Control",
       "scope": [
         "keyword.control",
-        "keyword.control.flow",
+        "keyword.control.flow"
       ],
       "settings": {
         "foreground": "#005c82"
@@ -778,7 +778,7 @@
     {
       "name": "Object keys",
       "scope": [
-        "meta.object-literal.key",
+        "meta.object-literal.key"
       ],
       "settings": {
         "foreground": "#006429"
@@ -1128,7 +1128,7 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "underline",
+        "fontStyle": "underline"
       }
     },
     {
