@@ -13,6 +13,7 @@ import { toVscodeTheme } from "./exporters/vscode.ts";
 import { toHelixTheme } from "./exporters/helix.ts";
 import { toGtk3Theme, toGtk4Theme } from "./exporters/gtk.ts";
 import { toPtyxisTheme } from "./exporters/ptyxis.ts";
+import { toQuickshell } from "./exporters/quickshell.ts";
 
 const { "vsce-path": vscePath } = parseArgs(Deno.args);
 
@@ -52,6 +53,9 @@ const buildSingleThemes = async (theme: Theme, type: string) => {
   const base16Yaml = YAML.stringify(base24);
   await Deno.writeTextFile(`build/${pathType}/kleur.yaml`, base16Yaml);
   await Deno.writeTextFile(`build/${pathType}/kleur.json`, base16Json);
+
+  const quickshell = toQuickshell(theme);
+  await Deno.writeTextFile(`build/${pathType}/quickshell.qml`, quickshell);
 
   const windowsTerminal = await toWindowsTerminalTheme(theme);
   await Deno.writeTextFile(

@@ -7,6 +7,10 @@
 ![Dark](https://github.com/user-attachments/assets/e4b5d606-85c0-41f1-95d0-aea82f93614c)
 ![Light](https://github.com/user-attachments/assets/c3423037-dc8c-4cbd-9dc3-c2830c83777a)
 
+## Documentation
+
+- [Zed Semantic Tokens Configuration](docs/zed-semantic-tokens.md) - Configure Zed's semantic highlighting to match VS Code
+
 ## Custom ports
 
 Most ports are handled here in the `build` folder or through nix stylix if I

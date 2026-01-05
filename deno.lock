@@ -3,6 +3,7 @@
   "specifiers": {
     "jsr:@std/cli@~0.224.7": "0.224.7",
     "npm:@adobe/leonardo-contrast-colors@*": "1.0.0",
+    "npm:@types/chroma-js@2": "2.4.5",
     "npm:chroma-js@2": "2.6.0"
   },
   "jsr": {
@@ -20,6 +21,9 @@
         "ciecam02",
         "hsluv"
       ]
+    },
+    "@types/chroma-js@2.4.5": {
+      "integrity": "sha512-6ISjhzJViaPCy2q2e6PgK+8HcHQDQ0V2LDiKmYAh+jJlLqDa6HbwDh0wOevHY0kHHUx0iZwjSRbVD47WOUx5EQ=="
     },
     "apca-w3@0.1.9": {
       "integrity": "sha512-Zrf6AeBeQjNe/fxK7U1jCo5zfdjDl6T4/kdw5Xlky3G7u+EJTZkyItjMYQGtwf9pkftsINxcYyOpuLkzKf1ITQ==",

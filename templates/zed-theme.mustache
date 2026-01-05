@@ -211,13 +211,13 @@
         "color": "#{{blue-hex}}"
       },
       "typeParameter": {
-        "color": "#{{green-hex}}"
+        "color": "#{{teal-hex}}"
       },
       "type": {
         "color": "#{{blue-hex}}"
       },
       "parameter": {
-        "color": "#{{purple-hex}}"
+        "color": "#{{teal-hex}}"
       },
       "variable": {
         "color": "#{{purple-hex}}"
@@ -225,11 +225,20 @@
       "variable.builtin": {
         "color": "#{{green-hex}}"
       },
+      "variable.readonly": {
+        "color": "#{{orange-hex}}"
+      },
       "property": {
         "color": "#{{purple-hex}}"
       },
+      "property.readonly": {
+        "color": "#{{orange-hex}}"
+      },
+      "property.static": {
+        "color": "#{{orange-hex}}"
+      },
       "enumMember": {
-        "color": "#{{green-hex}}"
+        "color": "#{{teal-hex}}"
       },
       "decorator": {
         "color": "#{{blue-hex}}"
@@ -268,6 +277,9 @@
       "method": {
         "color": "#{{blue-hex}}",
         "font_style": "italic"
+      },
+      "method.static": {
+        "color": "#{{blue-hex}}"
       },
       "macro": {
         "color": "#{{blue-hex}}"
@@ -412,6 +424,13 @@
       "emphasis.strong": {
         "color": "#{{primary-hex}}",
         "font_style": "italic",
+        "font_weight": 700
+      },
+      "*.deprecated": {
+        "color": "#{{base04-hex}}"
+      },
+      "*.unsafe": {
+        "color": "#{{red-hex}}",
         "font_weight": 700
       }
     }

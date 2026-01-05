@@ -216,13 +216,13 @@
         "color": "#27c7ff"
       },
       "typeParameter": {
-        "color": "#06d46e"
+        "color": "#00cec5"
       },
       "type": {
         "color": "#27c7ff"
       },
       "parameter": {
-        "color": "#bcb0ff"
+        "color": "#00cec5"
       },
       "variable": {
         "color": "#bcb0ff"
@@ -230,11 +230,20 @@
       "variable.builtin": {
         "color": "#06d46e"
       },
+      "variable.readonly": {
+        "color": "#f8aa14"
+      },
       "property": {
         "color": "#bcb0ff"
       },
+      "property.readonly": {
+        "color": "#f8aa14"
+      },
+      "property.static": {
+        "color": "#f8aa14"
+      },
       "enumMember": {
-        "color": "#06d46e"
+        "color": "#00cec5"
       },
       "decorator": {
         "color": "#27c7ff"
@@ -273,6 +282,9 @@
       "method": {
         "color": "#27c7ff",
         "font_style": "italic"
+      },
+      "method.static": {
+        "color": "#27c7ff"
       },
       "macro": {
         "color": "#27c7ff"
@@ -417,6 +429,13 @@
       "emphasis.strong": {
         "color": "#bcb0ff",
         "font_style": "italic",
+        "font_weight": 700
+      },
+      "*.deprecated": {
+        "color": "#bab9be"
+      },
+      "*.unsafe": {
+        "color": "#ffa192",
         "font_weight": 700
       }
     }
@@ -636,13 +655,13 @@
         "color": "#0f4860"
       },
       "typeParameter": {
-        "color": "#0f4d28"
+        "color": "#104b47"
       },
       "type": {
         "color": "#0f4860"
       },
       "parameter": {
-        "color": "#433e68"
+        "color": "#104b47"
       },
       "variable": {
         "color": "#433e68"
@@ -650,11 +669,20 @@
       "variable.builtin": {
         "color": "#0f4d28"
       },
+      "variable.readonly": {
+        "color": "#5c3d06"
+      },
       "property": {
         "color": "#433e68"
       },
+      "property.readonly": {
+        "color": "#5c3d06"
+      },
+      "property.static": {
+        "color": "#5c3d06"
+      },
       "enumMember": {
-        "color": "#0f4d28"
+        "color": "#104b47"
       },
       "decorator": {
         "color": "#0f4860"
@@ -693,6 +721,9 @@
       "method": {
         "color": "#0f4860",
         "font_style": "italic"
+      },
+      "method.static": {
+        "color": "#0f4860"
       },
       "macro": {
         "color": "#0f4860"
@@ -837,6 +868,13 @@
       "emphasis.strong": {
         "color": "#433e68",
         "font_style": "italic",
+        "font_weight": 700
+      },
+      "*.deprecated": {
+        "color": "#77777d"
+      },
+      "*.unsafe": {
+        "color": "#7b1e1b",
         "font_weight": 700
       }
     }

@@ -1300,12 +1300,15 @@
     "enum": "#{{green-hex}}",
     "interface": "#{{orange-hex}}",
     "struct": "#{{blue-hex}}",
-    "typeParameter": "#{{green-hex}}",
+    "typeParameter": "#{{teal-hex}}",
     "type": "#{{blue-hex}}",
-    "parameter": "#{{purple-hex}}",
+    "parameter": "#{{teal-hex}}",
     "variable": "#{{purple-hex}}",
+    "variable.readonly": "#{{orange-hex}}",
     "property": "#{{purple-hex}}",
-    "enumMember": "#{{green-hex}}",
+    "property.readonly": "#{{orange-hex}}",
+    "property.static": "#{{orange-hex}}",
+    "enumMember": "#{{teal-hex}}",
     "decorator": "#{{blue-hex}}",
     "event": "#{{blue-hex}}",
     "punct": "#{{purple-hex}}",
@@ -1339,6 +1342,10 @@
       "foreground": "#{{blue-hex}}",
       "italic": true
     },
+    "method.static": {
+      "foreground": "#{{blue-hex}}",
+      "italic": false
+    },
     "macro": "#{{blue-hex}}",
     "label": "#{{base06-hex}}",
     "comment": {
@@ -1371,6 +1378,14 @@
       "bold": false
     },
     "*.async": "#{{orange-hex}}",
+    "*.deprecated": {
+      "strikethrough": true,
+      "foreground": "#{{base04-hex}}"
+    },
+    "*.unsafe": {
+      "foreground": "#{{red-hex}}",
+      "bold": true
+    },
     "unresolvedReference": "#{{red-hex}}",
     "variable.defaultLibrary": "#{{green-hex}}",
     "variable.builtin": "#{{green-hex}}",
