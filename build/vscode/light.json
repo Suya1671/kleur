@@ -1304,9 +1304,9 @@
     "type": "#0f4860",
     "parameter": "#104b47",
     "variable": "#433e68",
-    "variable.readonly": "#5c3d06",
+    "variable.readonly": "#433e68",
     "property": "#433e68",
-    "property.readonly": "#5c3d06",
+    "property.readonly": "#433e68",
     "property.static": "#5c3d06",
     "enumMember": "#104b47",
     "decorator": "#0f4860",
@@ -1389,6 +1389,9 @@
     "unresolvedReference": "#7b1e1b",
     "variable.defaultLibrary": "#0f4d28",
     "variable.builtin": "#0f4d28",
+    "*.mutable": {
+      "fontStyle": "underline"
+    },
     "*.emph": {
       "italic": true
     }

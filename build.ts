@@ -4,7 +4,7 @@ import * as YAML from "yaml";
 import { colorListToObj } from "./generate.ts";
 import { Theme } from "./palettes.ts";
 import { objectEntries } from "./lib.ts";
-import { toZedThemes } from "./exporters/zed.ts";
+import { toZedThemes, toZedSemanticTokensDocs } from "./exporters/zed.ts";
 import { themeToColors } from "./exporters/outputConversion.ts";
 import { toBase24 } from "./exporters/base24.ts";
 import { toWindowsTerminalTheme } from "./exporters/windowsTerminal.ts";
@@ -14,6 +14,7 @@ import { toHelixTheme } from "./exporters/helix.ts";
 import { toGtk3Theme, toGtk4Theme } from "./exporters/gtk.ts";
 import { toPtyxisTheme } from "./exporters/ptyxis.ts";
 import { toQuickshell } from "./exporters/quickshell.ts";
+import { toVicinaeTheme } from "./exporters/vicinae.ts";
 
 const { "vsce-path": vscePath } = parseArgs(Deno.args);
 
@@ -66,6 +67,9 @@ const buildSingleThemes = async (theme: Theme, type: string) => {
   const helix = await toHelixTheme(theme);
   await Deno.writeTextFile(`build/${pathType}/helix.toml`, helix);
 
+  const vicinae = await toVicinaeTheme(theme);
+  await Deno.writeTextFile(`build/${pathType}/vicinae.toml`, vicinae);
+
   const gtk3 = await toGtk3Theme(theme);
   await Deno.writeTextFile(`build/${pathType}/gtk-3.css`, gtk3);
 
@@ -113,6 +117,13 @@ const buildZed = async () => {
   console.log("Building zed themes");
   const theme = await toZedThemes([dark, light]);
   await Deno.writeTextFile(`build/zed.json`, theme);
+
+  const darkSemanticTokensDocs = await toZedSemanticTokensDocs(dark);
+  await Deno.writeTextFile(`docs/zed-semantic-tokens-dark.md`, darkSemanticTokensDocs);
+
+  const lightSemanticTokensDocs = await toZedSemanticTokensDocs(light);
+  await Deno.writeTextFile(`docs/zed-semantic-tokens-light.md`, lightSemanticTokensDocs);
+
   console.log("Built zed themes");
 };
 

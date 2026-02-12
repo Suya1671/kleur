@@ -16,3 +16,8 @@ export const toZedThemes = async (themes: Theme[]) => {
   ).then((arr) => arr.join(",\n"));
   return template.replace("{{themes}}", themesString);
 };
+
+export const toZedSemanticTokensDocs = async (theme: Theme) => {
+  const context = toHandlebarsContext(theme);
+  return await handlebars.renderView("zed-semantic-tokens", context);
+};
